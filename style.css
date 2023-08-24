@@ -18,13 +18,104 @@
 	src: url("fuentes/ELEGANT.ttf");
 }
 
-body {
+
+
+/* body {
 	font-family: helvetica, ariel, san-serif;
-	background-image: url("http://www.ferialibrosalud.facmed.unam.mx/wp-content/uploads/2020/09/CAMPUS1-A.jpg");
+	background-image: url("UNAM.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-}
+} */
+body{
+	margin: 0;
+	overflow: hidden;
+	background: #000;
+	}
+	
+	i{
+		position: absolute;
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		-webkit-animation: 'screen'  infinite;
+	  animation: 'screen'  infinite;
+	}
+	
+	
+	i:nth-child(1){
+		top:20px;
+		left:30px;
+			background: -webkit-radial-gradient(center, ellipse cover,  rgba(2, 64, 252, 0.65) 0%,rgba(0,0,0,0) 100%);
+		box-shadow:0px 0px 5px 0px #0206fc;
+		animation-duration: 5s;
+	}
+	
+	i:nth-child(2){
+		top:420px;
+		left:30px;
+		background: -webkit-radial-gradient(center, ellipse cover,  rgba(250, 225, 2, 0.65) 0%,rgba(0,0,0,0) 100%);
+		box-shadow:0px 0px 5px 0px #fad102;
+		animation-duration: 21s;
+	}
+	
+	i:nth-child(3){
+		top:550px;
+		left:880px;
+		background: -webkit-radial-gradient(center, ellipse cover,  rgba(2, 110, 252, 0.65) 0%,rgba(0,0,0,0) 100%);
+		box-shadow:0px 0px 5px 0px #0298fc;
+		animation-duration: 5s;
+	}
+	
+	i:nth-child(4){
+		top:20px;
+		left:100px;
+			background: -webkit-radial-gradient(center, ellipse cover,  rgba(2, 64, 252, 0.65) 0%,rgba(0,0,0,0) 100%);
+		box-shadow:0px 0px 5px 0px #0206fc;
+		animation-duration: 5s;
+	}
+	
+	i:nth-child(5){
+		top:420px;
+		left:500px;
+		background: -webkit-radial-gradient(center, ellipse cover,  rgba(250, 225, 2, 0.65) 0%,rgba(0,0,0,0) 100%);
+		box-shadow:0px 0px 5px 0px #fad102;
+		animation-duration: 21s;
+	}
+	
+	i:nth-child(6){
+		top:550px;
+		left:500px;
+		background: -webkit-radial-gradient(center, ellipse cover,  rgba(2, 110, 252, 0.65) 0%,rgba(0,0,0,0) 100%);
+		box-shadow:0px 0px 5px 0px #0298fc;
+		animation-duration: 5s;
+	}
+	
+	
+	
+	@keyframes screen {
+		from {
+			opacity: 0;
+		}
+	
+		25%{
+			opacity: 0.3;
+			transform: scale3d(3, 3, 4);
+		}
+	
+		50%{
+			opacity: 0.75;
+		}
+	
+		75%{
+			opacity: 1;
+	
+		}
+	
+		to{
+			opacity: 0;
+		}
+	}
 
 /* The Modal (background) */
 .modal {
@@ -329,7 +420,7 @@ img{
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.message:hover .flip-card-inner {
+.frame:hover .flip-card-inner {
 	transform: rotateY(180deg);
 }
 
@@ -387,6 +478,6 @@ img{
 	transform: rotateY(180deg);
 }
 
-.siguiente{
+/* .siguiente{
 	right: 100%;
-}
+} */
