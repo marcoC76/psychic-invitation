@@ -20,102 +20,38 @@
 
 
 
-/* body {
+body {
 	font-family: helvetica, ariel, san-serif;
-	background-image: url("UNAM.jpg");
+	background-image: url("fes-zarag.png");
 	background-position: center;
-	background-repeat: no-repeat;
+	background-repeat: repeat;
 	background-size: cover;
-} */
-body{
-	margin: 0;
-	overflow: hidden;
-	background: #000;
+}
+
+
+@keyframes screen {
+	from {
+		opacity: 0;
 	}
-	
-	i{
-		position: absolute;
-		width: 120px;
-		height: 120px;
-		border-radius: 50%;
-		-webkit-animation: 'screen'  infinite;
-	  animation: 'screen'  infinite;
+
+	25% {
+		opacity: 0.3;
+		transform: scale3d(3, 3, 4);
 	}
-	
-	
-	i:nth-child(1){
-		top:20px;
-		left:30px;
-			background: -webkit-radial-gradient(center, ellipse cover,  rgba(2, 64, 252, 0.65) 0%,rgba(0,0,0,0) 100%);
-		box-shadow:0px 0px 5px 0px #0206fc;
-		animation-duration: 5s;
+
+	50% {
+		opacity: 0.75;
 	}
-	
-	i:nth-child(2){
-		top:420px;
-		left:30px;
-		background: -webkit-radial-gradient(center, ellipse cover,  rgba(250, 225, 2, 0.65) 0%,rgba(0,0,0,0) 100%);
-		box-shadow:0px 0px 5px 0px #fad102;
-		animation-duration: 21s;
+
+	75% {
+		opacity: 1;
+
 	}
-	
-	i:nth-child(3){
-		top:550px;
-		left:880px;
-		background: -webkit-radial-gradient(center, ellipse cover,  rgba(2, 110, 252, 0.65) 0%,rgba(0,0,0,0) 100%);
-		box-shadow:0px 0px 5px 0px #0298fc;
-		animation-duration: 5s;
+
+	to {
+		opacity: 0;
 	}
-	
-	i:nth-child(4){
-		top:20px;
-		left:100px;
-			background: -webkit-radial-gradient(center, ellipse cover,  rgba(2, 64, 252, 0.65) 0%,rgba(0,0,0,0) 100%);
-		box-shadow:0px 0px 5px 0px #0206fc;
-		animation-duration: 5s;
-	}
-	
-	i:nth-child(5){
-		top:420px;
-		left:500px;
-		background: -webkit-radial-gradient(center, ellipse cover,  rgba(250, 225, 2, 0.65) 0%,rgba(0,0,0,0) 100%);
-		box-shadow:0px 0px 5px 0px #fad102;
-		animation-duration: 21s;
-	}
-	
-	i:nth-child(6){
-		top:550px;
-		left:500px;
-		background: -webkit-radial-gradient(center, ellipse cover,  rgba(2, 110, 252, 0.65) 0%,rgba(0,0,0,0) 100%);
-		box-shadow:0px 0px 5px 0px #0298fc;
-		animation-duration: 5s;
-	}
-	
-	
-	
-	@keyframes screen {
-		from {
-			opacity: 0;
-		}
-	
-		25%{
-			opacity: 0.3;
-			transform: scale3d(3, 3, 4);
-		}
-	
-		50%{
-			opacity: 0.75;
-		}
-	
-		75%{
-			opacity: 1;
-	
-		}
-	
-		to{
-			opacity: 0;
-		}
-	}
+}
 
 /* The Modal (background) */
 .modal {
@@ -218,16 +154,16 @@ body{
 .message {
 	position: relative;
 
-	
 
-	
+
+
 
 }
 
-img{
+img {
 	position: absolute;
-    bottom: 0px;
-    right: 0px;
+	bottom: 0px;
+	right: 0px;
 }
 
 .txth2 {
@@ -242,7 +178,7 @@ img{
 }
 
 .Nom {
-	
+
 	background: -webkit-linear-gradient(#F7D182, #A16A2A);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -252,23 +188,24 @@ img{
 
 .txth3 {
 	position: relative;
-	font-size: 1.5em;
+	font-size: 1.6em;
 	background: -webkit-linear-gradient(#F7D182, #A16A2A);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	padding-left: 10%;
-	padding-right: 10%;
+	padding-left: 9%;
+	padding-right: 9%;
 	font-family: 'Elegant';
 }
 
 .Nom3 {
-	
+
 	background: -webkit-linear-gradient(#F7D182, #A16A2A);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	font-family: 'Shakies';
 }
+
 .left,
 .right,
 .top {
@@ -405,7 +342,7 @@ img{
 	perspective: 1000px;
 	/* Remove this if you don't want the 3D effect */
 
-	
+
 }
 
 /* This container is needed to position the front and back side */
@@ -416,11 +353,11 @@ img{
 	transition: transform 0.8s;
 	transform-style: preserve-3d;
 
-	
+
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.frame:hover .flip-card-inner {
+.message:hover .flip-card-inner {
 	transform: rotateY(180deg);
 }
 
@@ -433,7 +370,7 @@ img{
 	/* Safari */
 	backface-visibility: hidden;
 
-	
+
 }
 
 /* Style the front side (fallback if image is missing) */
@@ -455,7 +392,7 @@ img{
 	background-size: cover;
 
 
-	
+
 }
 
 /* Style the back side */
@@ -481,3 +418,71 @@ img{
 /* .siguiente{
 	right: 100%;
 } */
+
+/* nav */
+
+#datos{
+	position: fixed;
+	bottom: 35px;
+	left: 11%;
+}
+.nav {
+	position: fixed;
+	bottom: 10px;
+	left: 10%;
+	width: 80%;
+	height: 45px;
+	background: rgba(0, 0, 0, 0.211);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(4.0px);
+	-webkit-backdrop-filter: blur(4.0px);
+	border-radius: 50px;
+	border: 1px solid rgba(234, 219, 160, 0.18);
+	display: flex;
+	overflow-x: auto;
+}
+
+.nav__link {
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	min-width: 50px;
+	overflow: hidden;
+	white-space: nowrap;
+	font-family: sans-serif;
+	font-size: 10px;
+	background: -webkit-linear-gradient(#F7D182, #A16A2A);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+	transition: background-color 0.1s ease-in-out;
+}
+
+.nav__link:hover {
+	/*background: rgba( 0, 0, 0, 0.30 );*/
+	/*box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );*/
+	backdrop-filter: blur(2.0px);
+	-webkit-backdrop-filter: blur(2.0px);
+	/*border-radius: 10px;*/
+	/*border: 1px solid rgba( 255, 255, 255, 0.18 );*/
+}
+
+.nav__link--active {
+	/*  background: rgba( 0, 0, 0, 0.30 );*/
+	/*box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );*/
+	backdrop-filter: blur(2.0px);
+	-webkit-backdrop-filter: blur(2.0px);
+	/*border-radius: 10px;*/
+	/*border: 1px solid rgba( 255, 255, 255, 0.18 );*/
+
+
+
+}
+
+.nav__icon {
+	font-size: 14px;
+}
