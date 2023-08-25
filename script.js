@@ -56,6 +56,13 @@ const frasesJSON = {
 $(document)
     .ready(function () {
         actualizarH3ConFrase();
+        if (i == 0) {
+                    window.scrollTo(0, 10000);
+
+                    i = 1;
+                } else {
+
+                }
         $('.frame')
             .click(function () {
                 $('.top')
@@ -63,13 +70,7 @@ $(document)
                 $('.message')
                     .addClass('pull');
 
-                if (i == 0) {
-                    window.scrollTo(0, 10000);
-
-                    i = 1;
-                } else {
-
-                }
+                
             })
     });
 
