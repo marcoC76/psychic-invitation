@@ -26,6 +26,11 @@ body {
 	background-position: center;
 	background-repeat: repeat;
 	background-size: cover;
+
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
 }
 
 
@@ -197,6 +202,17 @@ img {
 	font-family: 'Elegant';
 }
 
+.regalo{
+	font-size: 3em;
+	background: -webkit-linear-gradient(#F7D182, #A16A2A);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	padding-top: 2.5%;
+	padding-left: 9%;
+	padding-right: 9%;
+	font-family: 'Elegant';
+}
+
 .Nom3 {
 
 	background: -webkit-linear-gradient(#F7D182, #A16A2A);
@@ -204,6 +220,16 @@ img {
 	-webkit-text-fill-color: transparent;
 	font-size: 1.2em;
 	font-family: 'Shakies';
+}
+
+.txtUbic {
+
+	background: -webkit-linear-gradient(#F7D182, #A16A2A);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 1.2em;
+	font-family: 'Elegant';
+	font-weight: bolder;
 }
 
 .left,
@@ -424,7 +450,7 @@ img {
 #datos{
 	position: fixed;
 	bottom: 35px;
-	left: 11%;
+	left: 15%;
 }
 .nav {
 	position: fixed;
@@ -486,3 +512,42 @@ img {
 .nav__icon {
 	font-size: 14px;
 }
+
+
+/* Split the screen in half */
+.split {
+	height: 80%;
+	width: 50%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	overflow-x: hidden;
+	padding-top: 0;
+  }
+  
+  /* Control the left side */
+  .leftSplit {
+	left: 0;
+	
+  }
+  
+  /* Control the right side */
+  .rightSplit {
+	right: 0;
+	
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+  }
+  
+  /* Style the image inside the centered container, if needed */
+  .centered img {
+	width: 150px;
+	border-radius: 50%;
+  }

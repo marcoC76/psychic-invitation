@@ -56,13 +56,6 @@ const frasesJSON = {
 $(document)
     .ready(function () {
         actualizarH3ConFrase();
-        if (i == 0) {
-                    window.scrollTo(0, 10000);
-
-                    i = 1;
-                } else {
-
-                }
         $('.frame')
             .click(function () {
                 $('.top')
@@ -70,7 +63,13 @@ $(document)
                 $('.message')
                     .addClass('pull');
 
-                
+                if (i == 0) {
+                    window.scrollTo(0, 10000);
+
+                    i = 1;
+                } else {
+
+                }
             })
     });
 
@@ -112,7 +111,7 @@ function actualizarH3ConFrase() {
     const h3Element = document.getElementById("txth3");
     h3Element.innerHTML = fraseAleatoria;
 }
-// Objeto JSON con las frases
+
 
 
 /* botones que abren modales */
@@ -126,15 +125,34 @@ function cambioContenido(btnPrecionado) {
 
             /* Frame: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3853332.3097783695!2d-103.94465018749996!3d19.411549000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fc5d159c5ac1%3A0xd367857dea367daf!2zU0FMQSBCQUzDmk1DQU7DgU4!5e0!3m2!1ses-419!2smx!4v1692989778069!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */
 
-          /*   const h3Element = document.getElementById("txth3");
+            var h3Element = document.getElementById("contenidoTarjeta");
             h3Element.innerHTML = `
-            <iframe src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3853332.3097783695!2d-103.94465018749996!3d19.411549000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fc5d159c5ac1%3A0xd367857dea367daf!2zU0FMQSBCQUzDmk1DQU7DgU4!5e0!3m2!1ses-419!2smx!4v1692989778069!5m2!1ses-419!2smx"
-            width = "600"
-            height = "450"
-            style = "border:0;"
-            allowfullscreen = ""
-            loading = "lazy"
-            referrerpolicy = "no-referrer-when-downgrade"></iframe>`; */
+
+            <div class="split leftSplit">
+            <div class="centered">
+              
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d940.7548776497488!2d-99.06732613040866!3d19.411562963737182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTnCsDI0JzQxLjYiTiA5OcKwMDQnMDAuMSJX!5e0!3m2!1ses-419!2smx!4v1693333543533!5m2!1ses-419!2smx"
+                width = "100%"
+                height = "100%"
+                style = "border:0;"
+                allowfullscreen = "eneble"
+                loading = ""
+                referrerpolicy = "no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+          
+          <div class="split rightSplit">
+            <div class="centered">
+                <a class="txtUbic"  href="https://goo.gl/maps/8AEYfPcsZ8roAzcg7" target="_blank">Calle 2 #165, Agrícola Pantitlán, Iztacalco, 08100 Ciudad de México, CDMX</a>
+                
+              
+            </div>
+          </div>
+
+            
+            `;
+
+
             break;
 
         case 2:
@@ -143,8 +161,9 @@ function cambioContenido(btnPrecionado) {
 
         case 3:
 
-            const h3Element = document.getElementById("txth3");
-            h3Element.innerHTML = `<br><br>Tu presencia es el mejor de los regalos`;
+            var tarjeta = document.getElementById("contenidoTarjeta");
+            tarjeta.innerHTML = `<h1 class="regalo">Tu presencia es el mejor de los regalos</h1>
+            `;
             break;
 
         case 4:
