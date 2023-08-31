@@ -558,9 +558,10 @@ img {
 
   .orientation-message {
 	display: none;
-	font-size: 24px;
+	font-size: 2em;
 	text-align: center;
 	background-color: #FFf;
+	background-size: cover;
  }
 
  
