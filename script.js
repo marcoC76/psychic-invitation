@@ -55,49 +55,22 @@ const frasesJSON = {
 
 $(document)
     .ready(function () {
+       
         actualizarH3ConFrase();
         $('.frame')
-            .click(function () {
+        .click(function () {
+                $("#bottom").animate({ scrollTop: $('#bottom')[0].scrollHeight}, 1000);
+                
                 $('.top')
                     .addClass('open');
                 $('.message')
                     .addClass('pull');
 
-                if (i == 0) {
-                    window.scrollTo(0, 10000);
 
-                    i = 1;
-                } else {
-
-                }
             })
     });
 
-// Get the modal
-var modal = document.getElementById('myModal');
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function () {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 // Función para obtener una frase aleatoria
 function obtenerFraseAleatoria() {
     const frases = frasesJSON.frases;
@@ -143,7 +116,7 @@ function cambioContenido(btnPrecionado) {
           
           <div class="split rightSplit">
             <div class="centered">
-                <a class="txtUbic"  href="https://goo.gl/maps/8AEYfPcsZ8roAzcg7" target="_blank">Calle 2 #165, Agrícola Pantitlán, Iztacalco, 08100 Ciudad de México, CDMX</a>
+                <a class="txtUbic"  href="https://goo.gl/maps/8AEYfPcsZ8roAzcg7" target="_blank">Calle 2 #165, Agrícola Pantitlán, Iztacalco, 08100 Ciudad de México, CDMX <br>15 hrs</a>
                 
               
             </div>
@@ -162,7 +135,8 @@ function cambioContenido(btnPrecionado) {
         case 3:
 
             var tarjeta = document.getElementById("contenidoTarjeta");
-            tarjeta.innerHTML = `<h1 class="regalo">Tu presencia es el mejor de los regalos</h1>
+            tarjeta.innerHTML = `<h1 class="regalo">Tu <span class="
+            Nom3">presencia</span> es el mejor de los regalos</h1>
             `;
             break;
 
@@ -174,3 +148,14 @@ function cambioContenido(btnPrecionado) {
             break;
     }
 }
+
+window.addEventListener("orientationchange", function () {
+   
+    var orientationMessage = document.getElementById("orientationMessage");
+    if (window.orientation === 90 || window.orientation === -90) {
+        orientationMessage.style.display = "none";
+    } else {
+        orientationMessage.style.display = "block";
+    }
+});
+
